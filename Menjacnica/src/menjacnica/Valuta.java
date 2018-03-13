@@ -25,10 +25,10 @@ public class Valuta {
 	public LinkedList<Kurs> getKurs() {
 		return kurs;
 	}
-	public void setKurs(LinkedList<Kurs> kurs) {
-		if(kurs == null)
+	public void setKurs(Kurs k) {
+		if(k == null)
 			throw new RuntimeException("Nepravilan unos za kurs");
-		this.kurs = kurs;
+		this.kurs.add(k);
 	}
 	@Override
 	public int hashCode() {
