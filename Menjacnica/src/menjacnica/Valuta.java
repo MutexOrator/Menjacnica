@@ -35,7 +35,6 @@ public class Valuta {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((punNaziv == null) ? 0 : punNaziv.hashCode());
-		result = prime * result + ((skrNaziv == null) ? 0 : skrNaziv.hashCode());
 		return result;
 	}
 	@Override
@@ -51,11 +50,6 @@ public class Valuta {
 			if (other.punNaziv != null)
 				return false;
 		} else if (!punNaziv.equals(other.punNaziv))
-			return false;
-		if (skrNaziv == null) {
-			if (other.skrNaziv != null)
-				return false;
-		} else if (!skrNaziv.equals(other.skrNaziv))
 			return false;
 		return true;
 	}
