@@ -10,18 +10,24 @@ public class Valuta {
 		return punNaziv;
 	}
 	public void setPunNaziv(String punNaziv) {
+		if(punNaziv == null || punNaziv.isEmpty())
+			throw new RuntimeException("Nepravilan unos za pun naziv valute");
 		this.punNaziv = punNaziv;
 	}
 	public String getSkrNaziv() {
 		return skrNaziv;
 	}
 	public void setSkrNaziv(String skrNaziv) {
+		if(skrNaziv == null || skrNaziv.isEmpty())
+			throw new RuntimeException("Nepravilan unos za skraceni naziv valute");
 		this.skrNaziv = skrNaziv;
 	}
 	public LinkedList<Kurs> getKurs() {
 		return kurs;
 	}
 	public void setKurs(LinkedList<Kurs> kurs) {
+		if(kurs == null)
+			throw new RuntimeException("Nepravilan unos za kurs");
 		this.kurs = kurs;
 	}
 	@Override
